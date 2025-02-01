@@ -20,14 +20,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px;
 }
 
 .menu-navegable {
-    text-align: center;
     color: white;
     text-decoration: none;
     font-size: 1.3em;
+    align-items: center;
     
 }
 
@@ -63,6 +62,7 @@ header {
     div {
         display: flex;
         align-items: center;
+
         a {
             text-decoration: none;
             color: white;
@@ -70,44 +70,76 @@ header {
         }
     }
 }
-.contenedor-header{
+
+.contenedor-header {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 150px 0px;
+    margin:23px 150px 0px;
 }
-.menu-navegable a:hover{
+
+.menu-navegable a:hover {
     background-color: black;
     border-radius: 8px;
     transform: scale(1.5);
 }
+
 main {
     color: white;
-
     h1 {
         color: white;
     }
-    section{
-        section{
-            display: flex;
+
+    section {
+        div {
+            display:block;
         }
         
+        }
     }
-}
-footer{
+
+footer {
     color: white;
 }
 
-.section {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    background-color: red;
-}
+.seccion-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+    gap: 35px;
+    margin: 100px;
 
-.sobrenos {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
+    .shows {
+        display: grid;
+        grid-column: 1/5;
+        grid-row: 1/3;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        .card {
+            background-size: 500px;
+            background-position: center center;
+            border: 2px solid purple;
+            border-radius: 15px;
+
+            .texto {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 15px;
+                color: white;
+                -webkit-text-stroke: 0.2px white;
+                font-size: 3rem;
+
+                p {
+                    color: white;
+                    -webkit-text-stroke: 0.2px gray;
+                    font-size: large;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
